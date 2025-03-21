@@ -1,0 +1,31 @@
+[
+    {
+      "id": 1,
+      "name": "Point of Sale Ordering System",
+      "author": "Jai Sachdeva",
+      "languages": ["JavaScript", "React", "Node.js"],
+      "description": "Developed a POS system for Jessy’s Pizza, automating order processing."
+    },
+    {
+      "id": 2,
+      "name": "Nurse Navigator Chatbot",
+      "author": "Jai Sachdeva",
+      "languages": ["Python", "AI"],
+      "description": "Built an AI-driven chatbot for healthcare professionals."
+    },
+    {
+      "id": 3,
+      "name": "Virtual Reality Fighting Game",
+      "author": "Jai Sachdeva",
+      "languages": ["C#", "Unity"],
+      "description": "Developed an immersive VR fighting game."
+    },
+    {
+      "id": 4,
+      "name": "Secure Messaging App",
+      "author": "Jai Sachdeva",
+      "languages": ["Blockchain", "React Native"],
+      "description": "Created a blockchain-powered secure chat application."
+    }
+  ]
+  
