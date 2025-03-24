@@ -26,6 +26,7 @@ app.get('/projects', (req, res) => {
 
 app.get('/weather', async (req, res) => {
   const { WEATHER_API_KEY, CITY } = process.env;
+
   if (!WEATHER_API_KEY || !CITY) {
     return res.status(500).json({ error: 'API key or city not set' });
   }
