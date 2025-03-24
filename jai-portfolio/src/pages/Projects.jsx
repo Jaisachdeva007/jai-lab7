@@ -6,7 +6,7 @@ function Projects() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('https://jai-lab7.onrender.com')
+    fetch('http://localhost:5050/projects')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Failed to fetch projects');
