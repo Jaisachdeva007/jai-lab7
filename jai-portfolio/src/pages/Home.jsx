@@ -4,7 +4,7 @@ function Home() {
   const [weather, setWeather] = useState(null);
 
   useEffect(() => {
-    fetch("https://jai-lab7.onrender.com")
+    fetch('https://jai-lab7.onrender.com/weather')
       .then((res) => res.json())
       .then((data) => setWeather(data))
       .catch((err) => console.error("Error fetching weather:", err));
