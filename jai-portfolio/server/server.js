@@ -7,7 +7,7 @@ const projects = require('./projects.json');
 
 dotenv.config();
 const app = express();
-const PORT = 5050;
+const PORT = process.env.PORT || 5050;
 
 app.use(cors());
 app.use(express.json());
@@ -15,7 +15,7 @@ app.use(express.json());
 let messagesMemory = [];
 
 app.get('/', (req, res) => {
-  res.send('Welcome to the API! Use /projects, /weather, /contact or /messages.');
+  res.send('API is running');
 });
 
 app.get('/projects', (req, res) => {
@@ -51,7 +51,8 @@ app.post('/contact', (req, res) => {
   const { name, email, subject, message, consent } = req.body;
 
   if (!name || !email || !subject || !message || !consent) {
-    return res.status(400).json({ error: 'Missing or invalid input' });
+    console.log(" Invalid submission:", req.body);
+    return res.status(400).json({ error: 'Invalid input' });
   }
 
   const sanitizedMessage = {
@@ -62,6 +63,7 @@ app.post('/contact', (req, res) => {
   };
 
   messagesMemory.push(sanitizedMessage);
+  console.log(" Message saved:", sanitizedMessage);
   res.status(201).json({ success: true });
 });
 
@@ -70,5 +72,5 @@ app.get('/messages', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
