@@ -8,6 +8,8 @@ import Projects from "./pages/Projects";
 import NotFound from "./pages/NotFound";
 import "./App.css";
 import "./index.css";
+import Contact from "./pages/Contact";
+import Messages from "./pages/Messages";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -35,6 +37,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/messages" element={<Messages />} />
       </Routes>
       <Footer />
     </>

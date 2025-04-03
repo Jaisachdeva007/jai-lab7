@@ -9,6 +9,8 @@ function Header({ darkMode, toggleTheme }) {
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/projects">Projects</Link>
+          <Link to="/contact">Contact</Link>
+          <Link to="/messages">Messages</Link>    
           <button className="theme-toggle-btn" onClick={toggleTheme}>
             {darkMode ? "☀️ Light" : "🌙 Dark"}
           </button>
