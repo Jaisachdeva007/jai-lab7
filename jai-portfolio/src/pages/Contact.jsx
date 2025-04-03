@@ -26,6 +26,8 @@ function Contact() {
       localStorage.setItem("contactDraft", JSON.stringify(formData));
     }
   }, [formData, submitted]);
+  
+
 
   const validate = () => {
     const newErrors = {};
